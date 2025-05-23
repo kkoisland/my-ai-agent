@@ -31,15 +31,20 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-4">
       <h1>AI Agent</h1>
-      <input
-        type="text"
+      <textarea
+        className="border border-gray-300 rounded px-4 py-2 w-[800px] h-[64px] mb-[20px] resize-none text-base placeholder:text-[24px]"
         value={inputText}
-        onChange={handleInputChange}
+        onChange={(e) => setInputText(e.target.value)}
         placeholder="Ask something..."
       />
-      <button onClick={handleSubmit}>Send</button>
+      <button
+        className="bg-blue-500 hover:bg-blue-600 text-white font-medium px-6 py-2 rounded transition-colors duration-200"
+        onClick={handleSubmit}
+      >
+        Send
+      </button>
       {responseText && (
         <div>
           <h2>Response</h2>
