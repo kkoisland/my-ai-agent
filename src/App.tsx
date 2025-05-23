@@ -4,10 +4,6 @@ const App = () => {
   const [inputText, setInputText] = useState('');
   const [responseText, setResponseText] = useState('');
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputText(e.target.value);
-  };
-
   const handleSubmit = async () => {
     if (!inputText.trim()) return;
 
