@@ -8,34 +8,46 @@ Along the way, I’m also learning Tailwind CSS and applying it to create a resp
 
 ## Why I’m Building This
 
-I’m building my own AI agent — not as a demo, but as a practical assistant that I will use daily to think, write, and communicate more effectively.
+I often feel it's a burden to explain the same things again and again.
 
-This project explores how to integrate OpenAI’s API with a custom frontend to create a useful, extensible assistant that fits my workflow.
+I want a personal assistant that understands how I write and think, and can suggest drafts in my natural tone.
 
-Eventually, I also plan to explore fine-tuning and voice input, so the assistant can better reflect how I think and interact naturally.
+This is not just a demo — I’m building something I’ll actually use, little by little, in a way that fits my own workflow.
+
+Eventually, I want it to help me write, plan, and remember things more easily and naturally.
 
 ## Long-Term Vision
 
-- Responds to natural instructions like “Add this to my calendar”, “Remind me later”, or “Order this for dinner”, by connecting to services like calendars, to-do apps, or messaging platforms
-- Learns my tone, phrasing, and language habits over time
-- Builds shopping lists or places orders through services like Amazon or UberEats by conversing with me to understand my preferences
-- Grows into a daily-use assistant that's uniquely mine
-- Stores preferences and logs locally (e.g. in JSON) for ongoing refinement
+- Responds to natural instructions like “Add this to my calendar” or “Order this for dinner”
+- Generates message, article, and memo drafts in my own tone and phrasing
+- Supports natural interactions without formal commands
+- Stores preferences and logs for consistency (future: local or MCP server)
 
-## Current Features (Initial Build)
+## Developer Learning Goals
 
-- Simple text-based chat interface
-- Responsive UI with Tailwind CSS
-- Supports multiline input
-- Connects to OpenAI-compatible endpoints (mocked or real)
-- Easy customization for future extensions
+- Gain experience using OpenAI API to implement interactive features
+- Improve frontend skills with React, TypeScript, and Tailwind CSS
+- Practice building a small backend using Express and MongoDB
+- Learn to iterate through design thinking: empathize, define, ideate, prototype, test
 
-## Current Features (Initial Build)
+## Development Plan
 
-- Connects directly to OpenAI’s chat/completions API to retrieve responses based on user input
-- Implements basic API communication using fetch, along with state management and error handling
-- Incorporates a structure for passing user-specific data (e.g., preferences or history in JSON format) to support agent growth
-- Provides a simple chat UI built with Tailwind CSS for input and response display
+- Phase 1: Tone and Draft Support
+
+  - Generate message/article/memo drafts using my own tone and phrasing
+  - Switch input type (Message / Article / Memo) via UI
+  - Show formatted output and allow 1-click copy
+
+- Phase 2: Calendar and Order Suggestions
+
+  - Parse natural input like “Add to calendar” or “Order this”
+  - Generate calendar entries (manual add)
+  - Suggest order links (Amazon, UberEats etc.) without execution
+
+- Phase 3: Server and Data Experiments
+  - Try saving preferences using Express and file or MongoDB
+  - Test using stored preferences in prompts
+  - Lay the groundwork for MCP-style consistency
 
 ## Tech Stack
 
